@@ -1,0 +1,25 @@
+Level: <%= @question.level %><br>
+Study Session: <%= @question.study_session %><br><br><br>
+
+
+<%= @question.question %><br><br>
+
+
+A. <%= @question.a %><br>
+B. <%= @question.b %><br>
+C. <%= @question.c %><br>
+D. <%= @question.d %><br>
+
+
+<br><br><br>
+Answer: <%= @question.correct_answer_option %>; <%= @question.correct_answer_value %>
+
+
+
+
+<br><br>Objective: <%= @question.objective %>
+
+<br><br>
+
+
+<%= link_to "Next", question_path(@question.id + 1) %>
