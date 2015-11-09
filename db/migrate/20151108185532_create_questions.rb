@@ -1,6 +1,7 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
+      t.integer :year
       t.integer :level
       t.text :question
       t.text :objective
@@ -21,6 +22,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :d
       t.string :correct_answer_option
       t.string :correct_answer_value
+      t.string :source
+      t.string :source_link
 
       t.timestamps null: false
     end

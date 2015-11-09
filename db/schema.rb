@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20151108185532) do
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
+    t.integer  "year"
     t.integer  "level"
     t.text     "question"
     t.text     "objective"
@@ -37,6 +38,8 @@ ActiveRecord::Schema.define(version: 20151108185532) do
     t.string   "d"
     t.string   "correct_answer_option"
     t.string   "correct_answer_value"
+    t.string   "source"
+    t.string   "source_link"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
