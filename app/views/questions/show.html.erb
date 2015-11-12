@@ -1,23 +1,26 @@
-Level: <%= @question.level %><br>
-Study Session: <%= @question.study_session %><br><br><br>
+Level: <%= @question.level %><br><br>
+<b>Study Session:</b > <%= @question.study_session %><br><br><br>
 
 
-<%= @question.question %><br><br>
+<%= raw @question.question %><br><br>
 
 
-A. <%= @question.a %><br>
-B. <%= @question.b %><br>
-C. <%= @question.c %><br>
-D. <%= @question.d %><br>
+A. <%= raw @question.a %><br>
+B. <%= raw @question.b %><br>
+C. <%= raw @question.c %><br>
+D. <%= raw @question.d %><br>
 
 
 <br><br><br>
-Answer: <%= @question.correct_answer_option %>; <%= @question.correct_answer_value %>
+Answer: <%= @question.correct_answer_option %>; <%= raw @question.correct_answer_value %>
 
 
 
 
-<br><br>Objective: <%= @question.objective %>
+<br><br><b>Objective:</b> <%= raw @question.objective %>
+<br><br><b>LOS:</b> <%= raw @question.los %>
+
+<br><br><b>Explanation:</b> <%= raw @question.explanation %>
 
 <br><br>
 

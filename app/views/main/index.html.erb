@@ -1,1 +1,7 @@
-cfa
+<ul>
+<% Question.pluck(:los).uniq.each do |los| %>
+
+<li><%= los %> <small><i>(<%= pluralize Question.where(los: los).count, "question" %>)</i></small></li><br>
+
+<% end %>
+</ul>
